@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900|Nunito:300,400,500,600,700,800,900&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Nunito', sans-serif; */
+
+@font-face {
+    font-family: 'Aovel Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/ASansreg.woff);
+}
+@font-face {
+    font-family: 'Aovel Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/ASans.woff);
+}
+@font-face {
+    font-family: 'Aovel Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/ASansBOLD.woff);
+}
+@font-face {
+    font-family: 'Aovel Sans Black';
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/ASansBlack.woff);
+}
+
+
+/* ------------ Global Styles ------------- */
+/* ------------ Global Styles ------------- */
+/* ------------ Global Styles ------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #161821;
+    text-decoration-line: underline;
+    text-decoration-color: lightcoral;
+    margin: 0 0 10px 0;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #161821;
+    text-decoration-line: underline;
+    text-decoration-color: lightcoral;
+    margin: 0 0 10px 0;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: darkslategray;
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    font-weight: 600;
+    color: #161821;
+}
+
+
+/* ------------ Navbar ------------- */
+/* ------------ Navbar ------------- */
+/* ------------ Navbar ------------- */
+
+.navbar {
+    position: relative;
+    width: 100%;
+    background-color: #161821;
+    z-index: 1000;
+    
+}
+.navbar .logobar {
+    width: 100%;
+    height: 200px;
+    background-color: #161821;
+}
+.navbar .logobar img {
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.navbar .menu {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #161821;
+    border-bottom: none;
+    transition: all 0.3s ease-out;
+}
+.navbar .menu a,
+.navbar .menu a:active,
+.navbar .menu a:visited {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: rgb(163, 163, 163);
+  text-decoration: none;
+  padding: 0 20px;
+  transition: color 0.7s;
+  -moz-transition: color 0.7s;
+}
+
+.navbar .menu a:hover {
+    color: white;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+    padding: 22px 20px;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: -175px;
+    cursor: pointer;
+  }
+  
+  .navbar .menu-icon .nav-icon {
+    background: lightgray;
+    display: block;
+    height: 2px;
+    width: 22px;
+    position: relative;
+    transition: background 0.3s ease-out;
+  }
+  
+  .navbar .menu-icon .nav-icon:before {
+    background: lightgray;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 7px;
+    transition: all 0.3s ease-out;
+  }
+  
+  .navbar .menu-icon .nav-icon:after {
+    background: lightgray;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -7px;
+    transition: all 0.3s ease-out;
+  }
+  
+  .navbar .menu-btn {
+    display: none;
+  }
+
+  .navbar .menu-btn:checked ~ .menu {
+    max-height: 500px;
+    border-bottom: lightcoral 5px solid;
+  }
+  
+  .navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  .navbar .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .navbar .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+
+/* ------------ Footer ------------- */
+/* ------------ Footer ------------- */
+/* ------------ Footer ------------- */
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: aliceblue;
+    text-decoration-line: underline;
+    text-decoration-color: lightcoral;
+    margin: 0 0 10px 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: #161821;
+    padding: 75px 0 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer a, 
+.footer a:visited,
+footer a:hover, 
+.footer a:active {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: lightcoral;
+    font-weight: 500;
+    /* text-decoration-line: underline;
+    text-decoration-color: lightcoral; */
+    margin-top: 15px;
+}
+
+.footer .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25%;
+    padding: 0 100px;
+    border-right: lightcoral 2px dotted;
+}
+
+.footer .contact .logo {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.footer .contact .logos {
+    /* width: 100%; */
+    display: flex;
+}
+.footer .contact .logos a {
+    height: 50px;
+    margin: 30px 50px 0 50px;
+}
+
+.footer .contact .logos img {
+    height: 100%;
+}
+
+.footer .privacy {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin: auto;
+    padding: 0 100px;
+}
+
+.footer .privacy p {
+    color: gray;
+    margin-top: 15px;
+}
+.legal {
+    width: 100%;
+    background-color: #161821;
+    padding: 5px 0;
+}
+
+.legal p {
+    padding: 0 75px;
+    text-align: right;
+}
+
+.legal a,
+.legal a:visited,
+.legal a:hover,
+.legal a:active {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: lightcoral;
+    font-weight: 400;
+}
+
+
+/* ------------ Homepage ------------- */
+/* ------------ Homepage ------------- */
+/* ------------ Homepage ------------- */
+
+.hero {
+    width: 100%;
+    height: 75vh;
+    background-image: url(assets/welcome2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 10px solid #161821;
+}
+
+.content {
+    background: url(assets/lotus-bg.svg) no-repeat bottom;
+    background-size: cover;
+    padding: 75px 0;
+}
+
+.content .vidtxt {
+    width: 1500px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.content .vidtxt .vid video {
+    border-radius: 20px;
+    display: block;
+    width: 650px;
+    margin: auto;
+    padding: 0;
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.30);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.3);
+}
+
+.content .vidtxt .txt {
+    width: 600px;
+}
+
+
+
+/* ------------ What Is Mediation? ------------- */
+/* ------------ What Is Mediation? ------------- */
+/* ------------ What Is Mediation? ------------- */
+
+.what-hdr {
+    position: relative;
+    width: 100%;
+}
+.what-hdr .txt {
+    width: 650px;
+    padding: 100px 0 0 100px;
+}
+.what-hdr .txt p {
+    font-size: 20px;
+}
+.what-hdr .img-big {
+    position: relative;
+    top: -240px;
+    right: -50px;
+    width: 80%;
+    margin: auto;
+    z-index: -10;
+}
+.what-hdr .img-small {
+    width: 700px;
+    margin: auto;
+    
+}
+.why {
+    width: 100%;
+    background-image: url(assets/lotus-bg.svg);
+    background: url(assets/lotus-bg.svg) no-repeat bottom;
+    background-size: cover;
+}
+.why h1 {
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto 100px auto;
+}
+.why .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.why .container .two-box {
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.why .container .one-box {
+    width: 350px;
+}
+.why .container .one-box img {
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+
+
+/* ------------ Benefits ------------- */
+/* ------------ Benefits ------------- */
+/* ------------ Benefits ------------- */
+
+.benefits {
+    width: 100%;
+}
+.benefits h1 {
+    text-align: center;
+    margin: 50px;
+}
+.benefits .container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 100px auto 200px auto;
+}
+.benefits .container .iconbox {
+    width: 300px;
+    margin: 30px 30px;
+}
+.benefits .container .iconbox img {
+    height: 150px;
+    margin-bottom: 10px;
+}
+.benefits .container .iconbox h1 {
+    font-size: 46px;
+}
+#heading {
+    align-self: center;
+}
+
+
+
+/* ------------ Media Queries ------------- */
+/* ------------ Media Queries ------------- */
+/* ------------ Media Queries ------------- */
+
+@media (max-width: 1650px) {
+    .content .vidtxt {
+        width: 95%;
+        margin: auto;
+        padding: unset;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .content .vidtxt .vid {
+        width: 675px;
+        margin-bottom: 75px;
+    }
+    .content .vidtxt .vid video {
+        width: 100%;
+        margin-top: 75px;
+    }
+    .content .vidtxt .txt {
+        width: 900px;
+    }
+    .content .vidtxt .txt .logos {
+        display: none;
+    }
+    .why h1 {
+        margin-top: 75px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1650px) {
+    .content .vidtxt .vid .logos {
+        display: none;
+    }
+}
+@media (max-width: 1550px) {
+    .what-hdr {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 50px;
+    }
+    .what-hdr .img-big {
+        display: none;
+    }
+    .what-hdr .txt {
+        width: 800px;
+        padding: 50px 0 50px 0;
+        margin: auto;
+    }
+    .what-hdr .txt h1 {
+        text-align: center;
+    }
+}
+@media (min-width: 1550px) {
+    .what-hdr .img-small {
+        display: none;
+    }
+}
+@media (max-width: 1350px) {
+    .why .container .two-box {
+        width: 70%;
+    }
+    .benefits .container {
+        width: 80%;
+        margin: 50px auto 150px auto;
+    }
+    #heading {
+        display: none;
+    }
+}
+@media (min-width: 1350px) {
+    .benefits h1 {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .content {
+        padding: 100px 0;
+    }
+    .content .vidtxt {
+        width: 90%;
+}
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 20px 0;
+    }
+    .footer .contact {
+        width: 50%;
+        border-right: none;
+        border-bottom: lightcoral 2px solid;
+        padding: 50px 0;
+        margin: 50px 0;
+    }
+    .footer .privacy {
+        align-items: center;
+        text-align: justify;
+    }
+
+}
+
+@media (max-width: 1150px) {
+    .why .container .two-box .one-box {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navbar .menu {
+        position: absolute;
+        clear: both;
+        float: right;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        /* background: rgb(25, 11, 29); */
+        width: 100%;
+      }
+      .navbar .menu li {
+        border-bottom: 1px solid lightcoral;
+        text-align: center;
+        width: 300px;
+        margin: auto;
+      }
+      .navbar .menu .contact {
+          margin-bottom: 20px;
+          border-bottom: none;
+      }
+      .navbar .menu a, .navbar .menu a:active, .navbar .menu a:visited {
+        padding: 20px 20px;
+        color: aliceblue;
+      }
+      .content .vidtxt .txt {
+        width: 100%;
+      }
+      .what-hdr {
+          padding-top: unset;
+      }
+      .what-hdr .txt {
+          width: 85%;
+          padding-top: 75px;
+      }
+      .why h1 {
+          width: 85%;
+      }
+      .why .container .two-box {
+          width: 80%;
+      }
+      .why .container .two-box .one-box img {
+          height: 150px;
+      }
+      .why .container .two-box .one-box h3 {
+          font-size: 26px;
+      }
+      .why .container .two-box .one-box p {
+          font-size: 18px;
+      }
+      .footer .privacy {
+          width: 80%;
+          padding: unset;
+      }
+      .legal  p {
+          text-align: center;
+      }
+}
+@media (min-width: 1100px) {
+    .navbar li {
+      float: left;
+    }
+    .navbar .menu {
+      position: relative;
+      top: -10px;
+      clear: none;
+      max-height: none;
+      width: 1010px;
+      margin: auto;
+      padding-bottom: 10px;
+    }
+    .navbar .menu a,
+    .navbar .menu a:active,
+    .navbar .menu a:visited,
+    .navbar li a {
+      padding: 2.5px 30px;
+      border-right: lightcoral 2px solid;
+    }
+    .navbar .menu .contact a {
+        border-right: none;
+    }
+    .navbar .menu-icon {
+      display: none;
+    }
+}
+@media (max-width: 900px) {
+    .benefits .container .iconbox {
+        width: 500px
+    }
+}
+
+@media (max-width: 850px) {
+    h1 {
+        font-size: 36px;
+    }
+    .what-hdr .txt {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+    .what-hdr .txt h1 {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .what-hdr .img-small {
+        width: 80%;
+    }
+    .why h1 {
+        width: 85%;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    .why .container .two-box {
+        flex-direction: column;
+        /* align-items: center; */
+        width: 85%;
+        margin-bottom: unset;
+    }
+    .why .container .two-box .one-box {
+        width: 550px;
+        margin-bottom: 50px;
+    }
+    .why .container .two-box .one-box img {
+        height: 200px;
+    }
+    .why .container .two-box .one-box h3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar .logobar {
+        height: 150px;
+    }
+    .navbar .logobar img {
+        width: 200px;
+    }
+    .navbar .menu-icon {
+        top: -145px;
+    }
+    .hero {
+        height: 500px;
+        background-image: url(assets/welcome-mob.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .content {
+        margin-bottom: 0;
+        padding: 50px 0 0 0;
+    }
+    .content .vidtxt {
+        width: 100%;
+    }
+    .content .vidtxt .txt {
+        width: 85%;
+    }
+    .content .vidtxt .txt h1 {
+        font-size: 30px;
+    }
+    .content .vidtxt .vid {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .content .vidtxt .vid video {
+        border-radius: unset;
+        box-shadow: unset;
+    }
+    .footer {
+        padding: 0 0 20px 0;
+    }
+
+    .footer a, .footer a:visited, footer a:hover, .footer a:active {
+        font-size: 15px;
+        }
+
+    .footer .contact .logos {
+        /*! width: 100%; */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #fmc {
+        height: 100px;
+    }
+    #fma {
+        height: 60px;
+    }
+    .footer .privacy p {
+        font-size: 16px;
+    }
+    .legal p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    .what-hdr .txt p {
+        font-size: 18px;
+    }
+    .why h1 {
+        margin-bottom: 50px;
+    }
+    .why .container .two-box .one-box {
+        width: 100%;
+    }
+    .why .container .two-box .one-box img {
+        height: 150px;
+    }
+    .why .container .two-box .one-box h3 {
+        font-size: 26px;
+    }
+    .benefits h1 {
+        width: 90%;
+        text-align: left;
+        margin: 50px 0 0 25px;
+    }
+    .benefits .container {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
