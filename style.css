@@ -49,6 +49,16 @@ h1 {
     margin: 0 0 10px 0;
 }
 
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #161821;
+    text-decoration-line: underline;
+    text-decoration-color: lightcoral;
+    margin: 0 0 10px 0;
+}
+
 h3 {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
@@ -70,6 +80,10 @@ p {
 a, a:visited, a:hover, a:active {
     text-decoration: none;
     font-weight: 600;
+    color: #161821;
+}
+span {
+    font-weight: 700;
     color: #161821;
 }
 
@@ -421,11 +435,63 @@ footer a:hover,
 .benefits .container .iconbox h1 {
     font-size: 46px;
 }
+#heading-box {
+    align-self: center;
+    margin: 0;
+}
 #heading {
     align-self: center;
+    text-align: left;
+    font-size: 40px;
+    margin: 0;
 }
 
 
+/* ------------ How Does It Work ------------- */
+/* ------------ How Does It Work ------------- */
+/* ------------ How Does It Work ------------- */
+
+.how {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.how h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 60px;
+}
+
+.how .section-a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.how .section-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.how .section-a .img,
+.how .section-b .img {
+    width: 600px;
+    margin: 0 50px;
+}
+
+.how .section-a .txt,
+.how .section-b .txt {
+    width: 700px;
+    margin: 25px 50px;
+}
+
+#contract {
+    width: 500px;
+}
 
 /* ------------ Media Queries ------------- */
 /* ------------ Media Queries ------------- */
@@ -457,6 +523,30 @@ footer a:hover,
         margin-top: 75px;
         text-align: center;
     }
+    .how .section-a,
+    .how .section-b {
+        flex-direction: column;
+        margin: 150px 0;
+    }
+    .how .section-a .img,
+    .how .section-b .img {
+        width: 650px;
+    }
+    .how .section-a .txt,
+    .how .section-b .txt {
+        width: 800px;
+    }
+    .how .section-a .txt h2,
+    .how .section-b .txt h2 {
+        text-align: center;
+    }
+    #contract {
+        width: 550px;
+    }
+    #top-section {
+        margin-top: 50px;
+    }
+
 }
 
 @media (min-width: 1650px) {
@@ -495,12 +585,13 @@ footer a:hover,
         width: 80%;
         margin: 50px auto 150px auto;
     }
-    #heading {
+    #heading,
+    #heading-box {
         display: none;
     }
 }
 @media (min-width: 1350px) {
-    .benefits h1 {
+    #header2 {
         display: none;
     }
 }
@@ -585,6 +676,18 @@ footer a:hover,
       .why .container .two-box .one-box p {
           font-size: 18px;
       }
+      .how .section-a .txt, .how .section-b .txt {
+        margin: 25px 0;
+    }
+    .how .section-a .img, .how .section-b .img {
+        width: 520px;
+    }
+    h2 {
+        margin: 10px 0 40px 0;
+    }
+    #contract {
+        width: 440px;
+    }
       .footer .privacy {
           width: 80%;
           padding: unset;
@@ -623,6 +726,25 @@ footer a:hover,
 @media (max-width: 900px) {
     .benefits .container .iconbox {
         width: 500px
+    }
+    .how {
+        padding: 50px 0 100px 0;
+    }
+    .how h1 {
+        font-size: 46px;
+        width: 90%;
+    }
+    .how h2 {
+        font-size: 40px;
+    }
+    .how .section-a,
+    .how .section-b {
+        margin: 150px auto;
+        width: 90%;
+    }
+    .how .section-a .txt,
+    .how .section-b .txt {
+        width: 90%;
     }
 }
 
@@ -701,6 +823,12 @@ footer a:hover,
         border-radius: unset;
         box-shadow: unset;
     }
+    .how .section-a .img, .how .section-b .img {
+        width: 70%;
+    }
+    #contract {
+        width: 55%;
+    }
     .footer {
         padding: 0 0 20px 0;
     }
@@ -757,6 +885,38 @@ footer a:hover,
     .benefits .container {
         width: 100%;
         margin-top: 25px;
+    }
+    .how {
+        padding: 30px 0 100px 0;
+    }
+    .how h1 {
+        font-size: 32px;
+        width: 85%;
+    }
+    .how h2 {
+        font-size: 30px;
+    }
+    .how .section-a .txt,
+    .how .section-b .txt {
+        width: 95%;
+    }
+    .how .section-a,
+    .how .section-b {
+        margin: 70px auto;
+        width: 90%;
+    }
+    #top-section {
+        margin-top: 30px;
+    }
+    .how .section-a .txt h2,
+    .how .section-b .txt h2 {
+        text-align: left;
+    }
+    .how .section-a .img, .how .section-b .img {
+        width: 80%;
+    }
+    h2 {
+        margin: 10px 0 20px 0;
     }
 }
 
